@@ -29,6 +29,11 @@ module tb ();
     wire [6:0] segments = uo_out[6:0];
     
 `ifdef GL_TEST
+  wire VPWR = 1'b1;
+  wire VGND = 1'b0;
+`endif
+    
+`ifdef GL_TEST
         //.VPWR( 1'b1),
         //.VGND( 1'b0),
         .VPWR( VPWR),
